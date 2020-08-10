@@ -2,12 +2,13 @@ import ToyReact, { Component } from './react.js';
 
 class P extends Component {
   constructor(props) {
-    super(props);
+    super();
     this.state = {
       data: props.data
     }
   }
   render() {
+    console.log('rrrr', this.props);
     const {data} = this.state;
     const {children} = this.props;
     return (
@@ -17,6 +18,8 @@ class P extends Component {
           <div>data:</div>
           <div>{data}</div>
           {children && children.map(child => child)}
+
+          are you ok?
         </div>
       </div>
     );
